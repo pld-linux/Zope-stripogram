@@ -1,4 +1,3 @@
-%include	/usr/lib/rpm/macros.python
 %define		zope_subname	stripogram
 Summary:	Library for converting HTML to Plain Text
 Summary(pl):	Biblioteka konwertuj±ca format HTML do zwyk³ego tekstu
