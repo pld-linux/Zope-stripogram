@@ -3,7 +3,7 @@ Summary:	Library for converting HTML to Plain Text
 Summary(pl):	Biblioteka konwertuj±ca format HTML do zwyk³ego tekstu
 Name:		Zope-%{zope_subname}
 Version:	1.4
-Release:	1
+Release:	2
 License:	GPL
 Group:		Development/Tools
 Source0:	http://dl.sourceforge.net/sourceforge/squishdot/%{zope_subname}-1-4.tgz
