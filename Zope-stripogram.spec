@@ -10,7 +10,7 @@ Source0:	http://dl.sourceforge.net/sourceforge/squishdot/%{zope_subname}-1-4.tgz
 # Source0-md5:	d09a0fa325ec2ae9a6a94b0b4aabd408
 URL:		http://zope.org/Members/chrisw/StripOGram/
 Requires(post,postun):	/usr/sbin/installzopeproduct
-BuildRequires:  python
+BuildRequires:	python
 %pyrequires_eq	python-modules
 Requires:	Zope
 BuildArch:	noarch
