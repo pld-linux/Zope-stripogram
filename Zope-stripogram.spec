@@ -6,11 +6,12 @@ Version:	1.4
 Release:	2
 License:	GPL
 Group:		Development/Tools
-Source0:	http://dl.sourceforge.net/sourceforge/squishdot/%{zope_subname}-1-4.tgz
+Source0:	http://dl.sourceforge.net/squishdot/%{zope_subname}-1-4.tgz
 # Source0-md5:	d09a0fa325ec2ae9a6a94b0b4aabd408
 URL:		http://zope.org/Members/chrisw/StripOGram/
-Requires(post,postun):	/usr/sbin/installzopeproduct
 BuildRequires:	python
+BuildRequires:	rpmbuild(macros) >= 1.268
+Requires(post,postun):	/usr/sbin/installzopeproduct
 %pyrequires_eq	python-modules
 Requires:	Zope
 BuildArch:	noarch
@@ -42,16 +43,12 @@ rm -rf $RPM_BUILD_ROOT
 
 %post
 /usr/sbin/installzopeproduct %{_datadir}/%{name} %{zope_subname}
-if [ -f /var/lock/subsys/zope ]; then
-	/etc/rc.d/init.d/zope restart >&2
-fi
+%service -q zope restart
 
 %postun
 if [ "$1" = "0" ]; then
 	/usr/sbin/installzopeproduct -d %{zope_subname}
-	if [ -f /var/lock/subsys/zope ]; then
-		/etc/rc.d/init.d/zope restart >&2
-	fi
+	%service -q zope restart
 fi
 
 %files
