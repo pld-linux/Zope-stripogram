@@ -1,6 +1,6 @@
 %define		zope_subname	stripogram
 Summary:	Library for converting HTML to Plain Text
-Summary(pl):	Biblioteka konwertuj±ca format HTML do zwyk³ego tekstu
+Summary(pl.UTF-8):   Biblioteka konwertujÄ…ca format HTML do zwykÅ‚ego tekstu
 Name:		Zope-%{zope_subname}
 Version:	1.4
 Release:	2
@@ -20,8 +20,8 @@ BuildRoot:	%{tmpdir}/%{name}-%{version}-root-%(id -u -n)
 %description
 stripogram is a library for converting HTML to Plain Text.
 
-%description -l pl
-stripogram jest bibliotek± konwertuj±c± format HTML do zwyk³ego
+%description -l pl.UTF-8
+stripogram jest bibliotekÄ… konwertujÄ…cÄ… format HTML do zwykÅ‚ego
 tekstu.
 
 %prep
